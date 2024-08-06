@@ -8,6 +8,11 @@ let x = "savage"
 console.log(x)
 console.log(typeof(x))
 
+//Null
+ let v = null
+ console.log(v)
+ console.log(typeof(v))
+
 //number
 
 
