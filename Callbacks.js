@@ -5,17 +5,30 @@
 //promises - object*
 //3 Stages - Pending, fullfilled, rejected
 
-function fetchData(callback){
-    setTimeout(() => {
-       let data = 'fetched data'
-       callback(data, null)
-    },5000)
+function getData(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('data fetched')
+        },5000)
+    })
 }
-function handleData(data, error){
- if(error){
-    console.error(error)
- }else{
-    console.log(data)
- }
+/*getData()
+    .this(result => {
+        console.log(result)
+    })
+    .catch(error => {
+        console.log(error)
+    })
+*/
+
+async function fetchData(){
+    try{
+        const result = await getData()
+        console.log(result)
+    }
+    catch(error){
+        console.log(error)
+    }
 }
-fetchData(handleData)
+
+fetchData()
