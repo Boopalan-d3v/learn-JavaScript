@@ -37,10 +37,18 @@ let Dob ='12/08/2024'
 
 //Grouping all variables to form a object
 
+//It's also another method to insert values to the object
+
 let Details = {
+    name: Name,
+    husbandName:husbandName,
+    Dob:Dob
+}
+
+/*let Details = {
     Name,
     husbandName,
     Dob
 }
-
+*/
 console.log(Details)
